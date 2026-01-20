@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio10</title>
+    <style>
+        .campo-formulario {
+            width: 300px;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .boton-envio {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .boton-envio:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Formulario de Contacto</h1>
+    </header>
+    <body>
+        <form action="">
+            Nombre: <input accesskey="n" title="Intrduce tu nombre completo" type="text" class="campo-formulario" id="nombre" name="nombre" required><br><br>
+            Email: <input accesskey="e" title="Introduce tu correo correctamente usando el @" type="email" class="campo-formulario" id="email" name="email" required><br><br>
+            Mensaje:<br>
+            <textarea accesskey="m" title="Introduce el mensaje que desees mandar" name="mensaje" class="campo-formulario" id="mensaje" rows="5" cols="30" required></textarea><br><br>
+            <input data-accion="enviar-formulario" class="boton-envio" type="submit" value="Enviar">
+        </form>
+        <p hidden>El mensaje ha sido enviado correctamente.</p>
+    
+        <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Aquí iría la lógica para enviar el formulario
+            document.querySelector('p').removeAttribute('hidden');
+        });
+        </script>
+    </body>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes Accesible</title>
+</head>
+<body>
+    <header>
+        <h1>Galería de Imágenes</h1>
+        <p>Una galería accesible con navegación por teclado y atributos de accesibilidad.</p>
+    </header>
+    
+    <main>
+        <!-- Galería de imágenes -->
+        <section role="region" aria-label="Galería de fotografías naturales">
+            <h2>Fotografías de la Naturaleza</h2>
+            
+            <!-- Contenedor 1 -->
+            <div id="imagen-1" 
+                 class="contenedor-imagen" 
+                 tabindex="0"
+                 data-imagen-id="001"
+                 data-descripcion="Amanecer en la montaña"
+                 role="figure"
+                 aria-label="Amanecer en la montaña">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                     alt="Montaña al amanecer con colores naranjas y rosados en el cielo"
+                     title="Amanecer en la montaña con colores espectaculares">
+                <p>Amanecer en la montaña</p>
+            </div>
+            
+            <!-- Contenedor 2 -->
+            <div id="imagen-2" 
+                 class="contenedor-imagen" 
+                 tabindex="0"
+                 data-imagen-id="002"
+                 data-descripcion="Bosque de otoño"
+                 role="figure"
+                 aria-label="Bosque de otoño">
+                <img src="https://images.unsplash.com/photo-1503435980610-a51f3ddfee50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                     alt="Camino en un bosque de otoño con hojas amarillas y naranjas"
+                     title="Bosque de otoño con hojas coloridas">
+                <p>Bosque de otoño</p>
+            </div>
+            
+            <!-- Contenedor 3 -->
+            <div id="imagen-3" 
+                 class="contenedor-imagen" 
+                 tabindex="0"
+                 data-imagen-id="003"
+                 data-descripcion="Aurora Boreal"
+                 role="figure"
+                 aria-label="Aurora Boreal">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                     alt="Aurora boreal sobre unas montañas"
+                     title="Aurora boreal sobre unas montañas">
+                <p>Aurora Boreal</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Galería de imágenes accesible - Ejercicio HTML</p>
+        <p>Todas las imágenes son de <a href="https://unsplash.com" target="_blank">Unsplash</a></p>
+    </footer>
+</body>
+</html>
