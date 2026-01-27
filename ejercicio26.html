@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --text-color: #FFFFFF;
+            --secondary-color: #2ecc71;
+            --button-color: #cc331f;
+            --espacio-base: 10px;
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: var(--espacio-base);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            text-align: center;
+            color: var(--primary-color);
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        label[required]::after {
+            content: " *";
+            color: red;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: var(--button-color);
+            color: var(--text-color);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input:focus, textarea:focus {
+            border-color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            outline: none;
+        }
+        input:invalid, textarea:invalid {
+            border-color: red;
+        }
+        /*Cambia el color del botón cuando sea válido*/
+        input[type="submit"]:valid {
+            background-color: var(--primary-color);
+        }
+        label::placeholder {
+            font-style: italic;
+            color: #888;
+        }
+        /*Usa ::selection para cambiar el color de fondo y texto del contenido seleccionado por el usuario.*/
+        ::selection {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h2>Formulario de Contacto</h2>
+        <label for="nombre">Nombre:</label><br>
+        <input required type="text" id="nombre" name="nombre">
+        <label for="email">Correo Electrónico:</label><br>
+        <input required type="email" id="email" name="email">
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" required name="mensaje" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

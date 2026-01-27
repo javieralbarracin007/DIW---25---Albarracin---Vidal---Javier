@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --text-color: #FFFFFF;
+            --secondary-color: #2ecc71;
+            --espacio-base: 10px;
+            --precio-base: 10;
+            --precio-descuento: 8;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: var(--espacio-base);
+            text-align: center;
+        }
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 var(--espacio-base);
+        }
+        li {
+            list-style: none;
+            padding: var(--espacio-base);
+            margin: var(--espacio-base) 0;
+            font-family: Arial, sans-serif;
+            font-size: 1.2em;
+        }
+        li:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+        li:nth-child(even) {
+            background-color: #e0e0e0;
+        }
+        li:hover {
+            /* Muestra una sombra al pasar el cursor */
+            box-shadow: 0 6px 8px rgba(28, 255, 20, 0.2);
+            cursor: pointer;
+        }
+        .Agotado:not(.Disponible, .Nuevo) {
+            text-decoration: line-through;
+            color: red;
+        }
+        .Nuevo::before {
+            content: "Nuevo! ";
+            font-weight: bold;
+            color: green;
+        }
+        .Agotado::after {
+            content: " (No disponible)";
+            font-style: italic;
+            color: red;
+        }
+        p {
+            margin: 5px 0 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+        p::first-line {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tienda</h1>
+        <nav>
+            <a href="#">Ejercicio 25</a>
+        </nav>
+    </header>
+    <body>
+        <ul>
+            <li class="Disponible">Producto 1 - Precio: $10
+                <p>Descripcion: <br>Producto nuevo y disponible</p>
+            </li>
+            <li class="Agotado">Producto 2 - Precio: $10
+                <p style="text-decoration: none">Descripcion: <br>Producto agotado</p>
+            </li>
+            <li class="Nuevo">Producto 3 - Precio: $10
+                <p >Descripcion: <br>Producto nuevo en la tienda</p>
+            </li>
+            <li class="Disponible">Producto 4 - Precio: $10
+                <p>Descripcion:<br> Producto disponible para la venta</p>
+            </li>
+        </ul>
+    </body>
+</body>
+</html>
