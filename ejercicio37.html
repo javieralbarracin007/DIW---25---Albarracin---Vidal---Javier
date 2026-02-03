@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Productos con Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        .titulo {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        #contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            height: 350px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin: 15px 15px 10px 15px;
+            color: #222;
+        }
+
+        .card p {
+            margin: 0 15px 15px 15px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            flex-grow: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Galería de Productos</h1>
+    
+    <div id="contenedor">
+        <div class="card">
+            <img src="/src/perfil.jpg" alt="Producto 1">
+            <h2>Producto 1</h2>
+            <p>Descripción breve del producto 1. Calidad premium con características excepcionales.</p>
+        </div>
+        
+        <div class="card">
+            <img src="/src/perfil.jpg" alt="Producto 2">
+            <h2>Producto 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio, officiis aliquid non velit amet obcaecati.</p>
+        </div>
+        
+        <div class="card">
+            <img src="/src/perfil.jpg" alt="Producto 3">
+            <h2>Producto 3</h2>
+            <p>Descripción corta.</p>
+        </div>
+        
+        <div class="card">
+            <img src="/src/perfil.jpg" alt="Producto 4">
+            <h2>Producto 4</h2>
+            <p>Este es un producto con una descripción de longitud media para demostrar cómo se comporta el contenido variable.</p>
+        </div>
+        
+        <div class="card">
+            <img src="/src/perfil.jpg" alt="Producto 5">
+            <h2>Producto 5</h2>
+            <p>Otro producto de ejemplo con características interesantes y diseño elegante para tu tienda.</p>
+        </div>
+        
+        <div class="card">
+            <img src="/src/perfil.jpg" alt="Producto 6">
+            <h2>Producto 6</h2>
+            <p>Última tarjeta del conjunto. Todas las tarjetas tienen la misma altura sin importar la longitud del contenido.</p>
+        </div>
+    </div>
+</body>
+</html>

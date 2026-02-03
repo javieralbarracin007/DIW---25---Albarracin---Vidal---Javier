@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #card1, #card3{
+            width: 200px;
+            background-color: azure;
+            border: 1px solid grey;
+            border-radius: 20px;
+        }
+        #card2{
+            width: 200px;
+            background-color: beige;
+            border: 1px solid grey;
+            border-radius: 20px;
+        }
+        #card1:hover, #card2:hover, #card3:hover{
+            width: 210px;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+        }
+        button{
+            background-color: rgb(171, 218, 202);
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        button:hover{
+            padding: 5px;
+            background-color: rgb(200, 243, 243);
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div id="card1">
+            <h2>Plan Basic</h2>
+            <span>5.99$</span>
+            <ul>
+                <li>agagag</li>
+                <li>dadadsad</li>
+            </ul>
+            <button>Suscribirse</button>
+        </div>
+        <div id="card2">
+            <h2>Plan Medium</h2>
+            <span>9.99$</span>
+            <ul>
+                <li>agagag</li>
+                <li>dadadsad</li>
+            </ul>
+            <button>Suscribirse</button>
+        </div>
+        <div id="card3">
+            <h2>Pan Avanzado</h2>
+            <span>19.99$</span>
+            <ul>
+                <li>agagag</li>
+                <li>dadadsad</li>
+            </ul>
+            <button>Suscribirse</button>
+        </div>
+    </div>
+</body>
+</html>

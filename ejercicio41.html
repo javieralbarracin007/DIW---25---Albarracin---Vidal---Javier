@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetado Flexbox - Columnas 1:2:1</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            /* Convertimos todo el cuerpo en un contenedor flex */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Altura mínima igual a la altura del viewport */
+        }
+        
+        /* Cabecera */
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px; /* Tamaño de letra 24px */
+            font-weight: bold; /* Texto en negrita */
+            height: 60px; /* Altura igual a 24px de tamaño de letra + padding */
+            line-height: 20px; /* Para centrar verticalmente el texto */
+        }
+        
+        /* Contenedor principal con las tres columnas */
+        .main-container {
+            display: flex;
+            flex: 1; /* Ocupa todo el espacio disponible */
+        }
+        
+        /* Estilos comunes para las columnas */
+        .columna {
+            padding: 24px; /* Padding de 24px como solicitado */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centrar verticalmente */
+            align-items: center; /* Centrar horizontalmente */
+            text-align: center; /* Centrar texto */
+            min-height: calc(100vh - 60px); /* Altura mínima igual al viewport menos la cabecera */
+        }
+        
+        /* Columnas con proporción 1:2:1 */
+        .columna-izquierda {
+            flex: 1; /* Proporción 1 */
+            background-color: #3498db; /* Azul */
+            color: white;
+        }
+        
+        .columna-centro {
+            flex: 2; /* Proporción 2 (el doble que las laterales) */
+            background-color: #ecf0f1; /* Gris claro */
+            color: #2c3e50;
+        }
+        
+        .columna-derecha {
+            flex: 1; /* Proporción 1 */
+            background-color: #2ecc71; /* Verde */
+            color: white;
+        }
+        
+        /* Estilos para el contenido */
+        .titulo-columna {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .columna-centro .titulo-columna {
+            border-bottom-color: rgba(44, 62, 80, 0.3);
+            color: #2c3e50;
+        }
+        
+        .contenido {
+            max-width: 90%;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Cabecera con título -->
+    <header class="header">
+        Titulo principal
+    </header>
+    
+    <!-- Contenedor principal con las tres columnas -->
+    <div class="main-container">
+        <!-- Columna izquierda (proporción 1) -->
+        <section class="columna columna-izquierda">
+            <h2 class="titulo-columna">COLUMNA IZQUIERDA</h2>
+        </section>
+        
+        <!-- Columna central (proporción 2) -->
+        <section class="columna columna-centro">
+            <h2 class="titulo-columna">COLUMNA CENTRAL</h2>
+        </section>
+        
+        <!-- Columna derecha (proporción 1) -->
+        <section class="columna columna-derecha">
+            <h2 class="titulo-columna">COLUMNA DERECHA</h2>
+        </section>
+    </div>
+</body>
+</html>
