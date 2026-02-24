@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 1px;
+            grid-template-columns: repeat(3, 150px);
+            text-align: center;
+        }
+        .container div{
+            background-color: rgb(37, 37, 37); 
+            color: white;
+            padding: 20px;
+        }
+        #header{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="header">Celda 1</div>
+        <div>Celda 2</div>
+        <div>Celda 3</div>
+        <div>Celda 4</div>
+        <div>Celda 5</div>
+        <div>Celda 6</div>
+        <div>Celda 7</div>
+    </div>
+</body>
+</html>
